@@ -1,0 +1,19 @@
+.picker { flex: 1 1 410px; max-width: 560px; min-width: 0; }
+.picker label { display: block; margin-bottom: 9px; color: #586880; font-size: 13px; font-weight: 650; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.selectWrap { position: relative; flex: 1 1 160px; min-width: 0; }
+.selectWrap select { appearance: none; width: 100%; min-height: 44px; background: #f7f9fc; border: 1px solid #dce3ef; border-radius: 8px; color: #384a68; font: inherit; font-size: 14px; padding: 11px 36px 11px 13px; cursor: pointer; }
+.selectWrap svg { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #8390a5; }
+.locateButton, .cancelButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 13px; border: 1px solid #d9e3fb; border-radius: 8px; background: #edf2ff; color: #315dbc; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.locateButton:hover { background: #e0e9ff; }
+.cancelButton { background: white; color: #66738a; border-color: #dce3ef; }
+.locateButton:disabled, .selectWrap select:disabled { opacity: .6; cursor: wait; }
+.locateButton:focus-visible, .cancelButton:focus-visible, .selectWrap select:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+.help { margin: 8px 0 0; color: #758198; font-size: 11px; line-height: 1.6; }
+.help a { color: #536e9b; text-underline-offset: 2px; }
+.status, .error { margin: 10px 0 0; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.status { color: #32704e; }
+.status:empty { display: none; }
+.error { padding: 10px 12px; border-radius: 7px; background: #fff4ee; color: #8b4930; }
+@media (max-width: 850px) { .picker { flex: initial; max-width: none; padding-top: 14px; border-top: 1px solid #edf0f5; } }
+@media (max-width: 420px) { .selectWrap, .locateButton { flex: 1 1 100%; } }

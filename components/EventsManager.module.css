@@ -1,0 +1,72 @@
+.page { max-width: 980px; margin: 40px auto; padding: 0 20px; }
+.title { margin-bottom: 8px; font-size: 28px; }
+.intro { color: #4b5563; line-height: 1.6; margin-bottom: 28px; }
+.columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.card { min-width: 0; padding: 28px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; }
+.card h2 { margin: 0; font-size: 20px; }
+.fields { min-width: 0; padding: 0; margin: 0; border: 0; }
+.fields label { display: block; margin-bottom: 8px; font-weight: 600; }
+.input { display: block; box-sizing: border-box; min-width: 0; width: 100%; padding: 12px; border: 1px solid #9ca3af; border-radius: 6px; font: inherit; font-size: 16px; color: #111827; background: white; }
+input.input { margin-bottom: 24px; }
+textarea.input { resize: vertical; line-height: 1.5; }
+.hint { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.saveButton, .refreshButton { min-height: 44px; border-radius: 6px; font: inherit; font-size: 16px; cursor: pointer; }
+.saveButton { width: 100%; margin-top: 12px; padding: 12px; background: #2563eb; color: white; border: none; }
+.saveButton:hover { background: #1d4ed8; }
+.refreshButton { padding: 8px 12px; background: white; color: #1d4ed8; border: 1px solid #d1d5db; }
+.refreshButton:hover { background: #eff6ff; }
+.fields:disabled .saveButton, .refreshButton:disabled { opacity: 0.6; cursor: wait; }
+.input:focus-visible, .saveButton:focus-visible, .refreshButton:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+.listHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.listHeader h2 { margin: 0; }
+.list { padding: 0; margin: 20px 0 0; list-style: none; }
+.event { padding: 16px 0; border-top: 1px solid #e5e7eb; }
+.event time { color: #1d4ed8; font-weight: 700; }
+.event p { margin: 8px 0 0; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.error { color: #b91c1c; line-height: 1.5; }
+.success { color: #166534; line-height: 1.5; }
+.success:empty { display: none; }
+.empty { padding: 24px 0 8px; color: #4b5563; line-height: 1.6; }
+.formHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+.editingCard { border-color: #9bb7ef; box-shadow: 0 0 0 3px #edf3ff; }
+.editingBadge { padding: 5px 9px; border-radius: 6px; background: #edf3ff; color: #315dbc; font-size: 13px; }
+.eventActions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.editButton, .deleteButton, .cancelEditButton, .confirmDeleteButton { min-height: 42px; padding: 9px 16px; border: 1px solid #d9e1ee; border-radius: 7px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.editButton { background: #edf3ff; border-color: #dce6fb; color: #315dbc; }
+.editButton:hover { background: #dfeaff; }
+.deleteButton { color: #ad3a3a; border-color: #f0d8d8; background: #fff7f7; }
+.deleteButton:hover { background: #ffe9e9; }
+.cancelEditButton { width: 100%; margin-top: 10px; background: #fff; color: #5c6b83; }
+.confirmDeleteButton { background: #b83030; border-color: #b83030; color: #fff; }
+.confirmDeleteButton:hover { background: #a02525; }
+.editButton:disabled, .deleteButton:disabled, .cancelEditButton:disabled, .confirmDeleteButton:disabled { cursor: not-allowed; opacity: .5; }
+.activeEvent { border-radius: 8px; background: #f2f6ff; padding: 16px 12px; }
+.deleteDialog { width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 48px); overflow: auto; padding: 28px; color: #19243b; border: 1px solid #dfe5ef; border-radius: 16px; box-shadow: 0 24px 70px #14213d33; }
+.deleteDialog::backdrop { background: #17243d80; }
+.deleteDialog h2 { margin: 0 0 12px; font-size: 23px; }
+.deleteDialog > p { color: #66738a; line-height: 1.6; font-size: 16px; }
+.deleteDialog > p.error { color: #b91c1c; }
+.deletePreview { max-height: 220px; overflow: auto; margin: 20px 0; padding: 16px; border-radius: 9px; background: #f6f8fc; }
+.deletePreview time { font-size: 14px; font-weight: 650; color: #536b90; }
+.deletePreview p { margin: 8px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+.dialogActions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.exportToolbar { margin-top: 20px; padding: 18px; border: 1px solid #dce6f4; border-radius: 10px; background: #f6f9ff; }
+.exportToolbar strong { font-size: 15px; color: #243d68; }
+.exportToolbar p { margin: 7px 0 0; font-size: 13px; line-height: 1.6; color: #586b88; }
+.exportButtons { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
+.calendarExportButton, .excelExportButton, .fileButton { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px; padding: 9px 12px; border: 1px solid; border-radius: 7px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.calendarExportButton { flex: 1 1 auto; background: #315dbc; color: #fff; border-color: #315dbc; }
+.calendarExportButton:hover { background: #254a9b; }
+.excelExportButton { flex: 1 1 auto; background: #fff; color: #216342; border-color: #b8d6c6; }
+.excelExportButton:hover { background: #eaf6ee; }
+.eventDownloads { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
+.fileButton { padding: 8px; background: #fff; border-color: #d9e1ee; color: #526789; }
+.fileButton:hover { color: #315dbc; background: #f1f5fc; }
+.calendarExportButton:disabled, .excelExportButton:disabled, .fileButton:disabled { opacity: .5; cursor: not-allowed; }
+.calendarExportButton:focus-visible, .excelExportButton:focus-visible, .fileButton:focus-visible,
+.editButton:focus-visible, .deleteButton:focus-visible, .cancelEditButton:focus-visible, .confirmDeleteButton:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+@media (max-width: 720px) {
+  .page { margin: 28px auto; padding: 0 16px; }
+  .columns { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 24px 20px; }
+}
